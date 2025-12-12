@@ -1,43 +1,27 @@
 {
+  "tooltip": {
+    "toggle-button": "Toggle Virtual Keyboard"
+  },
   "settings": {
-    "accessibility": {
-      "general": {
-        "section": {
-          "label": "Accessibility",
-          "description": "Various accessibility settings."
-        }
-      },
-      "virtual-keyboard": {
-        "section": {
-          "label": "Virtual Keyboard",
-          "description": "Settings for the Virtual Keyboard. Requires package: ydotool"
-        },
-        "position": {
-          "label": "Virtual Keyboard position",
-          "description": "Where the Virtual Keyboard should be on screen."
-        },
-        "selector": {
-          "label": "Toggle Virtual Keyboard",
-          "description": "This button is also availiable as a Bar Widget.",
-          "tooltip": "Open Virtual Keyboard"
-        },
-        "layout": {
-          "label": "Virtual Keyboard layout",
-          "description": "Change the keyboard layout"
-        }
-      },
-      "title": "Accessibility"
+    "layout": {
+      "label": "Virtual Keyboard layout",
+      "description": "Change the keyboard layout"
+    },
+    "size": {
+      "label": "Virtual Keyboard size",
+      "description": "Change the keyboard size"
     }
   },
   "options": {
-    "accessibility": {
-      "virtual-keyboard": {
-        "layout": {
-          "auto": "auto (QWERTY)",
-          "qwerty": "QWERTY",
-          "azerty": "AZERTY"
-        }
-      }
+    "layout": {
+      "auto": "auto (QWERTY)",
+      "qwerty": "QWERTY",
+      "azerty": "AZERTY",
+      "dvorak": "DVORAK"
+    },
+    "size": {
+      "compact": "compact",
+      "full": "full"
     }
   }
 }

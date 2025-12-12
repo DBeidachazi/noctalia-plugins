@@ -10,7 +10,6 @@
   "entryPoints": {
     "main": "Main.qml",
     "barWidget": "BarWidget.qml",
-    "panel": "Panel.qml",
     "settings": "Settings.qml"
   },
   "dependencies": {
@@ -18,8 +17,9 @@
   },
   "metadata": {
     "defaultSettings": {
-      "position": "top",
-      "layout": "auto"
+      "enabled": false,
+      "layout": "qwerty",
+      "style": "compact"
     }
   }
 }

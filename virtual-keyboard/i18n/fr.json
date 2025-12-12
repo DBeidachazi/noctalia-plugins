@@ -1,43 +1,27 @@
 {
+  "tooltip": {
+    "toggle-button": "Activer le Clavier Virtuel"
+  },
   "settings": {
-    "accessibility": {
-      "general": {
-        "section": {
-          "label": "Accessibilité",
-          "description": "Divers options d'accessibilité."
-        }
-      },
-      "virtual-keyboard": {
-        "section": {
-          "label": "Clavier Virtuel",
-          "description": "Paramètres du clavier virtuel. Requiers le paquet : ydotool"
-        },
-        "position": {
-          "label": "Position du Clavier Virtuel",
-          "description": "Où le Clavier Virtuel devrait se trouver sur l'écran."
-        },
-        "selector": {
-          "label": "Activer le Clavier Virtuel",
-          "description": "Ce bouton est aussi disponible comme Widget dans la Barre.",
-          "tooltip": "Ouvrir le Clavier Virtuel"
-        },
-        "layout": {
-          "label": "Disposition du Clavier Virtuel",
-          "description": "Changer la disposition du Clavier Virtuel"
-        }
-      },
-      "title": "Accessibilité"
+    "layout": {
+      "label": "Disposition du Clavier Virtuel",
+      "description": "Changez la disposition des touches"
+    },
+    "size": {
+      "label": "Taille du clavier",
+      "description": "Changez la taille du clavier"
     }
   },
   "options": {
-    "accessibility": {
-      "virtual-keyboard": {
-        "layout": {
-          "auto": "auto (AZERTY)",
-          "qwerty": "QWERTY",
-          "azerty": "AZERTY"
-        }
-      }
+    "layout": {
+      "auto": "auto (AZERTY)",
+      "qwerty": "QWERTY",
+      "azerty": "AZERTY",
+      "dvorak": "DVORAK"
+    },
+    "size": {
+      "compact": "compacte",
+      "full": "complet"
     }
   }
 }
