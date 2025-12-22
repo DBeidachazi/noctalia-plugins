@@ -15,21 +15,21 @@ DraggableDesktopWidget {
   showBackground: false
 
   // Settings from plugin
-  readonly property real sensitivity: pluginApi?.pluginSettings?.sensitivity ?? 1.5
-  readonly property bool showRings: pluginApi?.pluginSettings?.showRings ?? true
-  readonly property bool showBars: pluginApi?.pluginSettings?.showBars ?? true
-  readonly property real rotationSpeed: pluginApi?.pluginSettings?.rotationSpeed ?? 0.5
-  readonly property real barWidth: pluginApi?.pluginSettings?.barWidth ?? 0.6
-  readonly property real ringOpacity: pluginApi?.pluginSettings?.ringOpacity ?? 0.8
-  readonly property real bloomIntensity: pluginApi?.pluginSettings?.bloomIntensity ?? 0.5
+  readonly property real sensitivity: pluginApi?.pluginSettings?.sensitivity ?? pluginApi?.manifest?.metadata?.defaultSettings?.sensitivity
+  readonly property bool showRings: pluginApi?.pluginSettings?.showRings ?? pluginApi?.manifest?.metadata?.defaultSettings?.showRings
+  readonly property bool showBars: pluginApi?.pluginSettings?.showBars ?? pluginApi?.manifest?.metadata?.defaultSettings?.showBars
+  readonly property real rotationSpeed: pluginApi?.pluginSettings?.rotationSpeed ?? pluginApi?.manifest?.metadata?.defaultSettings?.rotationSpeed
+  readonly property real barWidth: pluginApi?.pluginSettings?.barWidth ?? pluginApi?.manifest?.metadata?.defaultSettings?.barWidth
+  readonly property real ringOpacity: pluginApi?.pluginSettings?.ringOpacity ?? pluginApi?.manifest?.metadata?.defaultSettings?.ringOpacity
+  readonly property real bloomIntensity: pluginApi.pluginSettings?.bloomIntensity ?? pluginApi?.manifest?.metadata?.defaultSettings?.bloomIntensity
 
-  // Animation time for shader
+  // Animation time for shader (0 to 3600, 1 hour cycle)
   property real shaderTime: 0
   NumberAnimation on shaderTime {
     loops: Animation.Infinite
     from: 0
-    to: 1000
-    duration: 100000
+    to: 3600
+    duration: 3600000
     running: !CavaService.isIdle
   }
 

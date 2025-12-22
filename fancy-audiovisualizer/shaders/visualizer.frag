@@ -194,8 +194,9 @@ vec4 computeVisualization(vec2 uv, float iTime, float bass, float mid, float hig
 void main() {
     vec2 uv = qt_TexCoord0;
 
-    // Animated time
-    float iTime = ubuf.time * 0.1;
+    // Convert linear time (0-3600) to smooth oscillation for seamless looping
+    // sin() ensures perfect continuity when QML wraps from 3600 back to 0
+    float iTime = sin(ubuf.time * TWOPI / 3600.0) * 1800.0 + 1800.0;
 
     // Frequency analysis
     float bass = getBass();
