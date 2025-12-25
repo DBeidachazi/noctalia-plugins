@@ -1,19 +1,22 @@
 {
   "id": "test",
-  "name": "Test",
+  "name": "OSDLyrics Sync",
   "version": "1.0.0",
   "minNoctaliaVersion": "3.6.0",
   "author": "Noctalia Team <team@noctalia.dev>",
   "license": "MIT",
   "repository": "https://github.com/DBeidachazi/noctalia-plugins",
-  "description": "A simple test widget",
+  "description": "Syncs lyrics from MPRIS players to OSDLyrics desktop lyrics display",
   "entryPoints": {
+    "main": "Main.qml",
     "barWidget": "BarWidget.qml"
   },
   "dependencies": {
     "plugins": []
   },
   "metadata": {
-    "defaultSettings": {}
+    "defaultSettings": {
+      "enabled": false
+    }
   }
 }
