@@ -1,5 +1,4 @@
 import QtQuick
-import QtQuick.Controls
 import QtQuick.Layouts
 import Quickshell
 import qs.Commons
@@ -53,13 +52,10 @@ Rectangle {
     }
   }
 
-  // Tooltip
+  // Click handler
   MouseArea {
     anchors.fill: parent
     hoverEnabled: true
-
-    ToolTip.visible: containsMouse
-    ToolTip.text: Main.lastLog || "OSDLyrics Sync Plugin"
-    ToolTip.delay: 500
+    cursorShape: Qt.PointingHandCursor
   }
 }
