@@ -45,37 +45,45 @@ Variants {
         WlrLayershell.exclusionMode: ExclusionMode.Ignore
         WlrLayershell.namespace: "noctalia-pin"
 
+        property int maskTrigger: 0
+
+        Connections {
+            target: pinRepeater
+            function onItemAdded() { Qt.callLater(() => { maskTrigger++ }) }
+            function onItemRemoved() { Qt.callLater(() => { maskTrigger++ }) }
+        }
+
         mask: Region {
-            Region { item: pinRepeater.itemAt(0) }
-            Region { item: pinRepeater.itemAt(1) }
-            Region { item: pinRepeater.itemAt(2) }
-            Region { item: pinRepeater.itemAt(3) }
-            Region { item: pinRepeater.itemAt(4) }
-            Region { item: pinRepeater.itemAt(5) }
-            Region { item: pinRepeater.itemAt(6) }
-            Region { item: pinRepeater.itemAt(7) }
-            Region { item: pinRepeater.itemAt(8) }
-            Region { item: pinRepeater.itemAt(9) }
-            Region { item: pinRepeater.itemAt(10) }
-            Region { item: pinRepeater.itemAt(11) }
-            Region { item: pinRepeater.itemAt(12) }
-            Region { item: pinRepeater.itemAt(13) }
-            Region { item: pinRepeater.itemAt(14) }
-            Region { item: pinRepeater.itemAt(15) }
-            Region { item: pinRepeater.itemAt(16) }
-            Region { item: pinRepeater.itemAt(17) }
-            Region { item: pinRepeater.itemAt(18) }
-            Region { item: pinRepeater.itemAt(19) }
-            Region { item: pinRepeater.itemAt(20) }
-            Region { item: pinRepeater.itemAt(21) }
-            Region { item: pinRepeater.itemAt(22) }
-            Region { item: pinRepeater.itemAt(23) }
-            Region { item: pinRepeater.itemAt(24) }
-            Region { item: pinRepeater.itemAt(25) }
-            Region { item: pinRepeater.itemAt(26) }
-            Region { item: pinRepeater.itemAt(27) }
-            Region { item: pinRepeater.itemAt(28) }
-            Region { item: pinRepeater.itemAt(29) }
+            Region { item: (maskTrigger, pinRepeater.count > 0) ? pinRepeater.itemAt(0) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 1) ? pinRepeater.itemAt(1) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 2) ? pinRepeater.itemAt(2) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 3) ? pinRepeater.itemAt(3) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 4) ? pinRepeater.itemAt(4) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 5) ? pinRepeater.itemAt(5) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 6) ? pinRepeater.itemAt(6) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 7) ? pinRepeater.itemAt(7) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 8) ? pinRepeater.itemAt(8) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 9) ? pinRepeater.itemAt(9) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 10) ? pinRepeater.itemAt(10) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 11) ? pinRepeater.itemAt(11) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 12) ? pinRepeater.itemAt(12) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 13) ? pinRepeater.itemAt(13) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 14) ? pinRepeater.itemAt(14) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 15) ? pinRepeater.itemAt(15) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 16) ? pinRepeater.itemAt(16) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 17) ? pinRepeater.itemAt(17) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 18) ? pinRepeater.itemAt(18) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 19) ? pinRepeater.itemAt(19) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 20) ? pinRepeater.itemAt(20) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 21) ? pinRepeater.itemAt(21) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 22) ? pinRepeater.itemAt(22) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 23) ? pinRepeater.itemAt(23) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 24) ? pinRepeater.itemAt(24) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 25) ? pinRepeater.itemAt(25) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 26) ? pinRepeater.itemAt(26) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 27) ? pinRepeater.itemAt(27) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 28) ? pinRepeater.itemAt(28) : null }
+            Region { item: (maskTrigger, pinRepeater.count > 29) ? pinRepeater.itemAt(29) : null }
         }
 
         Repeater {
