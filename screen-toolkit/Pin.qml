@@ -45,7 +45,41 @@ Variants {
         WlrLayershell.exclusionMode: ExclusionMode.Ignore
         WlrLayershell.namespace: "noctalia-pin"
 
+        mask: Region {
+            Region { item: pinRepeater.itemAt(0) }
+            Region { item: pinRepeater.itemAt(1) }
+            Region { item: pinRepeater.itemAt(2) }
+            Region { item: pinRepeater.itemAt(3) }
+            Region { item: pinRepeater.itemAt(4) }
+            Region { item: pinRepeater.itemAt(5) }
+            Region { item: pinRepeater.itemAt(6) }
+            Region { item: pinRepeater.itemAt(7) }
+            Region { item: pinRepeater.itemAt(8) }
+            Region { item: pinRepeater.itemAt(9) }
+            Region { item: pinRepeater.itemAt(10) }
+            Region { item: pinRepeater.itemAt(11) }
+            Region { item: pinRepeater.itemAt(12) }
+            Region { item: pinRepeater.itemAt(13) }
+            Region { item: pinRepeater.itemAt(14) }
+            Region { item: pinRepeater.itemAt(15) }
+            Region { item: pinRepeater.itemAt(16) }
+            Region { item: pinRepeater.itemAt(17) }
+            Region { item: pinRepeater.itemAt(18) }
+            Region { item: pinRepeater.itemAt(19) }
+            Region { item: pinRepeater.itemAt(20) }
+            Region { item: pinRepeater.itemAt(21) }
+            Region { item: pinRepeater.itemAt(22) }
+            Region { item: pinRepeater.itemAt(23) }
+            Region { item: pinRepeater.itemAt(24) }
+            Region { item: pinRepeater.itemAt(25) }
+            Region { item: pinRepeater.itemAt(26) }
+            Region { item: pinRepeater.itemAt(27) }
+            Region { item: pinRepeater.itemAt(28) }
+            Region { item: pinRepeater.itemAt(29) }
+        }
+
         Repeater {
+            id: pinRepeater
             model: root.pins.length
 
             delegate: Item {
